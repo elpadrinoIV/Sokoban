@@ -1,0 +1,30 @@
+01 - El muñeco se puede mover a una zona libre
+	01A01: Solo izquierda libre, mover a la izquierda, el muñeco debe poder moverse
+	01A02: Solo derecha libre, mover a la derecha, el muñeco debe poder moverse
+	01A03: Solo arriba libre, mover arriba, el muñeco debe poder moverse
+	01A04: Solo abajo libre, mover abajo, el muñeco debe poder moverse
+02 - El muñeco no se puede mover a una zona ocupada
+	02A01: Solo izquierda ocupado, mover a la izquierda, el muñeco no debe poder moverse
+	02A02: Solo derecha ocupado, mover a la derecha, el muñeco no debe poder moverse
+	02A03: Solo arriba ocupado, mover arriba, el muñeco no debe poder moverse
+	02A04: Solo abajo ocupado, mover abajo, el muñeco no debe poder moverse
+03 - Todas las luces ocupadas con cajas completan el nivel
+04 - Si hay luces sin ocupar, el nivel no está completo
+05 - Empujar cajas
+	05A01: tratar de mover caja a la izquierda estando libre
+	05A02: tratar de mover caja a la derecha estando libre
+	05A03: tratar de mover caja arriba estando libre
+	05A04: tratar de mover caja abajo estando libre
+	05A05: tratar de mover caja a la izquierda estando ocupado con pared
+	05A06: tratar de mover caja a la derecha estando ocupado con pared
+	05A07: tratar de mover caja arriba estando ocupado con pared
+	05A08: tratar de mover caja abajo estando ocupado con pared
+	05A08: tratar de mover caja estando ocupado con otra caja
+06 - Cargar nivel de archivo
+07 - Temas (gráficos)
+08 - Highscore
+09 - Niveles
+10 - Mover con teclado
+11 - Visualización
+12 - Undo
+13 - Contar movimientos
