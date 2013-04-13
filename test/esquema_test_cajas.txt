@@ -18,16 +18,16 @@
  WALL: x = 6, y = 2
 
  # Fila 3
- WALL: x = 1, y = 2
- WALL: x = 6, y = 2
+ WALL: x = 1, y = 3
+ WALL: x = 6, y = 3
 
  # Fila 4
- WALL: x = 1, y = 2
- WALL: x = 6, y = 2
+ WALL: x = 1, y = 4
+ WALL: x = 6, y = 4
 
  # Fila 5
- WALL: x = 1, y = 2
- WALL: x = 6, y = 2
+ WALL: x = 1, y = 5
+ WALL: x = 6, y = 5
 
  # Fila 6
  WALL: x = 1, y = 6

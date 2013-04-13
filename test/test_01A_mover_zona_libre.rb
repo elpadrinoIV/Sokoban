@@ -66,5 +66,4 @@ class TestZonaLibre < Test::Unit::TestCase
     assert_equal(y_original, y_nuevo, "no se tiene que mover en y")
   end
 end
-
-    
+  
