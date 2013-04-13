@@ -29,4 +29,12 @@ class Caja < Item
   def ocupa_lugar?
     true
   end
+
+  def get_imagen
+    'B'
+  end
+
+  def movible?
+    true
+  end
 end

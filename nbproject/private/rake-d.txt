@@ -1,2 +1,2 @@
 default=
-test=
+test=Run tests for test

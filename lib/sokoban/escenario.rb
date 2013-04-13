@@ -1,5 +1,5 @@
 # require 'caja'
-require 'Pared'
+require 'pared'
 class Escenario
   def initialize
     # WWWWWW
@@ -10,7 +10,7 @@ class Escenario
     # WGB WW W
     # WWW    W
     #   WWWWWW
-
+=begin
     @escenario = [ ['W', 'W', 'W', 'W', 'W', 'W', ' ', ' '],
                    ['W', ' ', ' ', 'D', ' ', 'W', ' ', ' '],
                    ['W', ' ', ' ', ' ', ' ', 'W', 'W', 'W'],
@@ -19,7 +19,7 @@ class Escenario
                    ['W', 'G', 'B', ' ', 'W', 'W', ' ', 'W'],
                    ['W', 'W', 'W', ' ', ' ', ' ', ' ', 'W'],
                    [' ', ' ', 'W', 'W', 'W', 'W', 'W', 'W']]
-
+=end
     @items = Array.new
   end
 
@@ -31,6 +31,16 @@ class Escenario
     end
 
      libre
+  end
+
+  def item_puede_moverse_a_posicion?(x, y)
+    puede_moverse = esta_libre?(x, y)
+
+    @items.each do |item|
+      if item.get_x == x && item.get_y == y
+        puede_moverse = puede_moverse && item.movible?
+      end
+    end
   end
 
   def cargar_escenario (escenario)
@@ -53,13 +63,28 @@ class Escenario
   end
   
   def dibujar
-    
-    @escenario.each do |fila|
-      fila.each do |elemento|
-        print elemento
-      end
-      print "\n";
+    escenario = Array.new
+    (1..10).each do |nro_fila|
+      escenario.push(Array.new(10,' '))
     end
+
+    @items.each do |item|
+      fila = item.get_y - 1
+      col = item.get_x - 1
+
+      escenario[fila][col] = item.get_imagen
+      
+    end
+    
+
+
+    escenario.each do |fila|
+      fila.each do |elem|
+        print elem
+      end
+      print "\n"
+    end
+  
 
   end
 end

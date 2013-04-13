@@ -29,9 +29,9 @@
  
  # Fila 3
  WALL: x = 1, y = 3
- WALL: x = 6, y = 1
- WALL: x = 7, y = 1
- WALL: x = 8, y = 1
+ WALL: x = 6, y = 3
+ WALL: x = 7, y = 3
+ WALL: x = 8, y = 3
  
  # Fila 4
  WALL: x = 1, y = 4

@@ -1,0 +1,31 @@
+# wwwwww
+# wDw Dw
+# w wwww
+# www
+
+# Fila 1
+WALL: x = 1, y = 1
+WALL: x = 2, y = 1
+WALL: x = 3, y = 1
+WALL: x = 4, y = 1
+WALL: x = 5, y = 1
+WALL: x = 6, y = 1
+
+# Fila 2
+WALL: x = 1, y = 2
+TARGET: x = 2, y = 2
+WALL: x = 3, y = 2
+TARGET: x = 5, y = 2
+WALL: x = 6, y = 2
+
+# Fila 3
+WALL: x = 1, y = 3
+WALL: x = 3, y = 3
+WALL: x = 4, y = 3
+WALL: x = 5, y = 3
+WALL: x = 6, y = 3
+
+# Fila 4
+WALL: x = 1, y = 4
+WALL: x = 2, y = 4
+WALL: x = 3, y = 4

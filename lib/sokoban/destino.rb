@@ -8,4 +8,8 @@ class Destino < Item
   def ocupa_lugar?
     false
   end
+
+  def get_imagen
+    'D'
+  end
 end

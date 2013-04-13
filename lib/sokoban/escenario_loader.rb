@@ -1,12 +1,12 @@
 # To change this template, choose Tools | Templates
 # and open the template in the editor.
 
-require 'Escenario'
-require 'Caja'
-require 'Pared'
-require 'Persona'
-require 'Item'
-
+require 'caja'
+require 'destino'
+require 'escenario'
+require 'item'
+require 'pared'
+require 'persona'
 
 class EscenarioLoader
   def initialize
@@ -27,8 +27,9 @@ class EscenarioLoader
         linea.strip!
         if (linea =~ /(WALL|BOX|TARGET|GUY)\s*:\s*x\s*=\s*([0-9]+)\s*,\s*y\s*=\s*([0-9]+)/)
           elemento = $1
-          x = $2
-          y = $3
+
+          x = $2.to_i
+          y = $3.to_i
           case elemento
           when "WALL"
             pared = Pared.new
@@ -36,15 +37,18 @@ class EscenarioLoader
             escenario.agregar_item(pared)
           when "BOX"
             caja = Caja.new
-            pared.set_posicion(x, y)
+            caja.set_posicion(x, y)
             escenario.agregar_item(caja)
             caja.set_escenario(escenario)
           when "TARGET"
-
+            target = Destino.new
+            target.set_posicion(x, y)
+            escenario.agregar_item(target)
           end
         end
       end
     end
+    escenario
   end
 
   private

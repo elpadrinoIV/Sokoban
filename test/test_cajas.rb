@@ -1,19 +1,20 @@
 require File.dirname(__FILE__) + '/helper.rb'
 
+require 'escenario_loader'
 require 'escenario'
 require 'caja'
 
-class TestZonaLibre < Test::Unit::TestCase
+class TestCajas < Test::Unit::TestCase
   def setup
-    @escenario = Escenario.new
-    forma_escenario = [ ['W', 'W', 'W', 'W', 'W', 'W'],
-                        ['W', ' ', ' ', ' ', ' ', 'W'],
-                        ['W', ' ', ' ', ' ', ' ', 'W'],
-                        ['W', ' ', ' ', ' ', ' ', 'W'],
-                        ['W', ' ', ' ', ' ', ' ', 'W'],
-                        ['W', 'W', 'W', 'W', 'W', 'W']]
-
-   @escenario.cargar_escenario(forma_escenario)
+    # WWWWWW
+    # W    W
+    # W    W
+    # W    W
+    # W    W
+    # WWWWWW
+    escenario_loader = EscenarioLoader.new
+    archivo = File.dirname(__FILE__) + '/esquema_test_cajas.txt'
+    @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
 
   def test_mover_izquierda_libre
