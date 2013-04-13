@@ -54,7 +54,7 @@ class TestZonaLibre < Test::Unit::TestCase
     tipito.set_escenario(@escenario)
     tipito.set_posicion(2, 3)
 
-    assert_equal(true, tipito.puede_moverse_arribas?)
+    assert_equal(true, tipito.puede_moverse_arriba?)
 
     x_original = tipito.get_x
     y_original = tipito.get_y
