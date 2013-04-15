@@ -25,20 +25,32 @@ class Persona < Item
 
   def mover_derecha
     if puede_moverse_derecha?
+      caja_a_la_derecha = caja_en_posicion(@x + 1, @y)
+      if nil != caja_a_la_derecha
+        caja_a_la_derecha.mover_derecha
+      end
       @x = @x + 1
     end
   end
 
   def mover_arriba
     if puede_moverse_arriba?
+      caja_arriba = caja_en_posicion(@x, @y - 1)
+      if nil != caja_arriba
+        caja_arriba.mover_arriba
+      end
       @y = @y - 1
     end
   end
 
   def mover_abajo
-    if puede_moverse_abajo?
-      @y = @y + 1
+    if puede_moverse_arriba?
+      caja_abajo = caja_en_posicion(@x, @y + 1)
+      if nil != caja_abajo
+        caja_abajo.mover_abajo
+      end
     end
+      @y = @y + 1
   end
 
   def puede_moverse_izquierda?
