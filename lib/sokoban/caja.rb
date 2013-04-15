@@ -23,6 +23,7 @@ class Caja < Item
   end
 
   def mover_abajo
+    print "mover abajo desde #{@y}\n"
       @y = @y + 1 if @escenario.esta_libre?(@x, @y + 1)
   end
 
