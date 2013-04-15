@@ -1,71 +1,16 @@
-# <espacio> = floor
-# W = wall
-# B = box
-# D = destination
-# G = guy
+; <espacio> = floor
+; # = wall
+; $ = box (alone)
+; . = destination (alone)
+; @ = guy (alone)
+; * = box and destintation
+; + = guy and destination
 
-# WWWWWW  
-# W  D W  
-# W    WWW
-# W WBBD W
-# WD  WW W
-# WGB WW W
-# WWW    W
-#   WWWWWW
-  
- 
- # Fila 1
- WALL: x = 1, y = 1
- WALL: x = 2, y = 1
- WALL: x = 3, y = 1
- WALL: x = 4, y = 1
- WALL: x = 5, y = 1
- WALL: x = 6, y = 1
- 
- # Fila 2
- WALL: x = 1, y = 2
- TARGET: x = 4, y = 2
- WALL: x = 6, y = 2
- 
- # Fila 3
- WALL: x = 1, y = 3
- WALL: x = 6, y = 3
- WALL: x = 7, y = 3
- WALL: x = 8, y = 3
- 
- # Fila 4
- WALL: x = 1, y = 4
- WALL: x = 3, y = 4
- BOX: x = 4, y = 4
- BOX: x = 5, y = 4
- TARGET: x = 6, y = 4
- WALL: x = 8, y = 4
- 
- # Fila 5
- WALL: x = 1, y = 5
- TARGET: x = 2, y = 5
- WALL: x = 5, y = 5
- WALL: x = 6, y = 5
- WALL: x = 8, y = 5
- 
- # Fila 6
- WALL: x = 1, y = 6
- GUY: x = 2, y = 6
- BOX: x = 3, y = 6
- WALL: x = 5, y = 6
- WALL: x = 6, y = 6
- WALL: x = 8, y = 6
- 
- #Fila 7
- WALL: x = 1, y = 7
- WALL: x = 2, y = 7
- WALL: x = 3, y = 7
- WALL: x = 8, y = 7
- 
- #Fila 8
- WALL: x = 3, y = 8
- WALL: x = 4, y = 8
- WALL: x = 5, y = 8
- WALL: x = 6, y = 8
- WALL: x = 7, y = 8
- WALL: x = 8, y = 8
+######
+#  . #  
+#    ###
+# #$$. #
+#.  ## #
+#@$ ## #
+###    #
+  ######
