@@ -116,4 +116,8 @@ class Escenario
     
     todos_ocupados
   end
+
+  def get_cajas
+    @cajas
+  end
 end

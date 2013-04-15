@@ -15,6 +15,10 @@ class Persona < Item
  
   def mover_izquierda
     if puede_moverse_izquierda?
+      caja_a_la_izquierda = caja_en_posicion(@x -1, @y)
+      if nil != caja_a_la_izquierda
+        caja_a_la_izquierda.mover_izquierda
+      end
       @x = @x - 1
     end
   end
@@ -55,5 +59,13 @@ class Persona < Item
 
   def get_imagen
     'G'
+  end
+
+  def caja_en_posicion (x, y)
+    caja_en_pos = nil
+    @escenario.get_cajas.each do |caja|
+      caja_en_pos = caja if caja.get_x == x && caja.get_y == y
+    end
+    caja_en_pos
   end
 end

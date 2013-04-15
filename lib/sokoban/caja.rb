@@ -26,6 +26,22 @@ class Caja < Item
       @y = @y + 1 if @escenario.esta_libre?(@x, @y + 1)
   end
 
+  def se_puede_izquierda?
+    @escenario.esta_libre?(@x - 1, @y)
+  end
+
+  def se_puede_derecha?
+    @escenario.esta_libre?(@x + 1, @y)
+  end
+
+  def se_puede_arriba?
+    @escenario.esta_libre?(@x, @y - 1)
+  end
+
+  def se_puede_abajo?
+    @escenario.esta_libre?(@x, @y + 1)
+  end
+
   def ocupa_lugar?
     true
   end

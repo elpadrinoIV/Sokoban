@@ -45,7 +45,7 @@ class TestZonaLibre < Test::Unit::TestCase
     x_nuevo = tipito.get_x
     y_nuevo = tipito.get_y
 
-    assert_equal(x_original + 1, x_nuevo, "no se movio a la izquierda")
+    assert_equal(x_original + 1, x_nuevo, "no se movio a la derecha")
     assert_equal(y_original, y_nuevo, "no se tiene que mover en y")
   end
 
@@ -58,12 +58,29 @@ class TestZonaLibre < Test::Unit::TestCase
 
     x_original = tipito.get_x
     y_original = tipito.get_y
-    tipito.mover_derecha
+    tipito.mover_arriba
     x_nuevo = tipito.get_x
     y_nuevo = tipito.get_y
 
-    assert_equal(x_original + 1, x_nuevo, "no se movio a la izquierda")
-    assert_equal(y_original, y_nuevo, "no se tiene que mover en y")
+    assert_equal(x_original, x_nuevo, "no se tiene que mover en x")
+    assert_equal(y_original - 1, y_nuevo, "no se movio arriba")
+  end
+
+  def test_01a04_mover_abajo_libre
+    tipito = Persona.new
+    tipito.set_escenario(@escenario)
+    tipito.set_posicion(2, 2)
+
+    assert_equal(true, tipito.puede_moverse_abajo?)
+
+    x_original = tipito.get_x
+    y_original = tipito.get_y
+    tipito.mover_abajo
+    x_nuevo = tipito.get_x
+    y_nuevo = tipito.get_y
+
+    assert_equal(x_original, x_nuevo, "no se tiene que mover en x")
+    assert_equal(y_original + 1, y_nuevo, "no se movio arriba")
   end
 end
   

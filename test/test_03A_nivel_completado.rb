@@ -15,7 +15,7 @@ class TestNivelCompletado < Test::Unit::TestCase
     @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
   
-  def test_3_luces_3_cajas
+  def test_a03a01_3_luces_3_cajas
     caja1 = Caja.new
     caja1.set_posicion(2, 2)
     @escenario.agregar_caja(caja1)
@@ -34,7 +34,7 @@ class TestNivelCompletado < Test::Unit::TestCase
     assert_equal(true, @escenario.todos_los_destinos_ocupados?, "todos los destinos deberian estar ocupados")
   end
 
-  def test_3_luces_4_cajas
+  def test__03a02_3_luces_4_cajas
     caja1 = Caja.new
     caja1.set_posicion(2, 2)
     @escenario.agregar_caja(caja1)
