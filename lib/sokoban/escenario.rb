@@ -66,6 +66,10 @@ class Escenario
   def agregar_pared(pared)
     @paredes.push pared
   end
+
+  def agregar_persona(persona)
+    @persona = persona
+  end
   
   def dibujar
     escenario = Array.new
@@ -77,22 +81,34 @@ class Escenario
       fila = item.get_y - 1
       col = item.get_x - 1
 
-      escenario[fila][col] = item.get_imagen
-    end
-
-    @cajas.each do |item|
-      fila = item.get_y - 1
-      col = item.get_x - 1
-
-      escenario[fila][col] = item.get_imagen
+      escenario[fila][col] = '#'
     end
 
     @destinos.each do |item|
       fila = item.get_y - 1
       col = item.get_x - 1
 
-      escenario[fila][col] = item.get_imagen
+      escenario[fila][col] = '.'
     end
+
+    @cajas.each do |item|
+      fila = item.get_y - 1
+      col = item.get_x - 1
+
+      if '.' == escenario[fila][col]
+        escenario[fila][col] = '*'
+      else
+        escenario[fila][col] = '$'
+      end
+    end
+    
+    if ('.' == escenario[@persona.get_y - 1][@persona.get_x - 1])
+
+      escenario[@persona.get_y - 1][@persona.get_x - 1] = '+'
+    else
+      escenario[@persona.get_y - 1][@persona.get_x - 1] = '@'
+    end
+
     
     escenario.each do |fila|
       fila.each do |elem|
