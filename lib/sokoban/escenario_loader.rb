@@ -31,8 +31,9 @@ class EscenarioLoader
         fila = fila + 1
         
         (1..linea.length).each do |columna|
+          # puts linea[columna - 1]
           case linea[columna - 1]
-          when '#'
+          when '#'  
             pared = Pared.new
             pared.set_posicion(columna, fila)
             escenario.agregar_pared(pared)

@@ -27,8 +27,7 @@ class Escenario
 
   def esta_libre? (x, y)
     libre = true
-
-    @paredes.each do |item|
+    @paredes.each do |item|  
       libre = false if (item.ocupa_lugar? && item.get_x == x && item.get_y == y)
     end
 

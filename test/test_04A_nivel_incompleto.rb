@@ -15,11 +15,11 @@ class TestNivelIncompleto < Test::Unit::TestCase
     @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
   
-  def test_3_luces_0_cajas
-    assert_equal(false, @escenario.todos_los_destinos_ocupados?, "ningún destino está ocupado")
+  def test_04a01_3_luces_0_cajas
+    assert_equal(false, @escenario.todos_los_destinos_ocupados?, "ningun destino esta ocupado")
   end
 
-  def test_3_luces_3_cajas_2_ocupando_destino
+  def test_04a02_3_luces_3_cajas_2_ocupando_destino
     caja1 = Caja.new
     caja1.set_posicion(2, 2)
     @escenario.agregar_caja(caja1)
@@ -35,10 +35,10 @@ class TestNivelIncompleto < Test::Unit::TestCase
     @escenario.agregar_caja(caja3)
     caja3.set_escenario(@escenario)
 
-    assert_equal(false, @escenario.todos_los_destinos_ocupados?, "no están ocupados todos los destinos")
+    assert_equal(false, @escenario.todos_los_destinos_ocupados?, "no estan ocupados todos los destinos")
   end
 
-  def test_3_luces_3_cajas_2_ocupando_destino
+  def test_04a03_3_luces_4_cajas_2_ocupando_destino
     caja1 = Caja.new
     caja1.set_posicion(2, 2)
     @escenario.agregar_caja(caja1)
@@ -59,7 +59,7 @@ class TestNivelIncompleto < Test::Unit::TestCase
     @escenario.agregar_caja(caja4)
     caja4.set_escenario(@escenario)
 
-    assert_equal(false, @escenario.todos_los_destinos_ocupados?, "no están ocupados todos los destinos")
+    assert_equal(false, @escenario.todos_los_destinos_ocupados?, "no estan ocupados todos los destinos")
   end
 
 end
