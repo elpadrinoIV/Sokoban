@@ -11,13 +11,6 @@ Dir['sokoban/*.rb'].each { |file|
   require file
 }
 
-# escenario = Escenario.new
-forma_escenario = [ ['w', 'w', 'w', 'w', 'w', 'w'],
-                    ['w', ' ', 'w', ' ', ' ', 'w'],
-                    ['w', ' ', 'w', 'w', 'w', 'w'],
-                    ['w', 'w', 'w', ' ', ' ', ' ']]
-
-#escenario.cargar_escenario(forma_escenario)
 escenario_loader = EscenarioLoader.new
 escenario = escenario_loader.cargar_escenario_desde_archivo('../data/nivel1.txt')
 escenario.dibujar
