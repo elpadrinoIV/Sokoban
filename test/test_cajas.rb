@@ -20,7 +20,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_izquierda_libre
     caja = Caja.new
     caja.set_posicion(3, 3)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
     
     x_original = caja.get_x
@@ -36,7 +36,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_derecha_libre
     caja = Caja.new
     caja.set_posicion(3, 3)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -52,7 +52,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_arriba_libre
     caja = Caja.new
     caja.set_posicion(3, 3)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -68,7 +68,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_abajo_libre
     caja = Caja.new
     caja.set_posicion(3, 3)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -84,7 +84,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_izquierda_ocupado_con_pared
     caja = Caja.new
     caja.set_posicion(2, 2)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -100,7 +100,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_derecha_ocupado_con_pared
     caja = Caja.new
     caja.set_posicion(5, 2)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -116,7 +116,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_arriba_ocupado_con_pared
     caja = Caja.new
     caja.set_posicion(2, 2)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -132,7 +132,7 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_abajo_ocupado_con_pared
     caja = Caja.new
     caja.set_posicion(2, 5)
-    @escenario.agregar_item(caja)
+    @escenario.agregar_caja(caja)
     caja.set_escenario(@escenario)
 
     x_original = caja.get_x
@@ -148,22 +148,22 @@ class TestCajas < Test::Unit::TestCase
   def test_mover_ocupado_con_caja
     caja_izq_arr = Caja.new
     caja_izq_arr.set_posicion(3, 3)
-    @escenario.agregar_item(caja_izq_arr)
+    @escenario.agregar_caja(caja_izq_arr)
     caja_izq_arr.set_escenario(@escenario)
 
     caja_der_arr = Caja.new
     caja_der_arr.set_posicion(4, 3)
-    @escenario.agregar_item(caja_der_arr)
+    @escenario.agregar_caja(caja_der_arr)
     caja_der_arr.set_escenario(@escenario)
 
     caja_izq_aba = Caja.new
     caja_izq_aba.set_posicion(3, 4)
-    @escenario.agregar_item(caja_izq_aba)
+    @escenario.agregar_caja(caja_izq_aba)
     caja_izq_aba.set_escenario(@escenario)
 
     caja_der_aba = Caja.new
     caja_der_aba.set_posicion(4, 4)
-    @escenario.agregar_item(caja_der_aba)
+    @escenario.agregar_caja(caja_der_aba)
     caja_der_aba.set_escenario(@escenario)
 
     # No se deberia mover a la izquierda

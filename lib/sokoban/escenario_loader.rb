@@ -21,6 +21,9 @@ class EscenarioLoader
 
   def cargar_escenario lineas
     escenario = Escenario.new
+    paredes = Array.new
+    destinos = Array.new
+    cajas = Array.new
     lineas.each do |linea|
       linea = strip_comentarios linea
       if !linea_en_blanco?(linea)
@@ -34,20 +37,36 @@ class EscenarioLoader
           when "WALL"
             pared = Pared.new
             pared.set_posicion(x, y)
-            escenario.agregar_item(pared)
+            paredes.push pared
           when "BOX"
             caja = Caja.new
             caja.set_posicion(x, y)
-            escenario.agregar_item(caja)
             caja.set_escenario(escenario)
+            cajas.push caja
           when "TARGET"
             target = Destino.new
             target.set_posicion(x, y)
-            escenario.agregar_item(target)
+            destinos.push target
           end
         end
       end
     end
+
+    # pongo primero las paredes
+    paredes.each do |pared|
+      escenario.agregar_pared(pared)
+    end
+
+    # después los destinos
+    destinos.each do |destino|
+      escenario.agregar_destino(destino)
+    end
+
+    # después las cajas
+    cajas.each do |caja|
+      escenario.agregar_caja(caja)
+    end
+    
     escenario
   end
 

@@ -12,6 +12,9 @@
 	03A01: 3 luces, 3 cajas, las cajas en las posiciones de las luces 
 	03A02: 3 luces, 4 cajas, 3 de las cajas sobre las luces
 04 - Si hay luces sin ocupar, el nivel no está completo
+	04A01: 3 luces, ninguna caja
+	04A02: 3 luces, 3 cajas, 2 en luces, la tercera afuera
+	04A03: 3 luces, 4 cajas, 2 en luces, 2 afuera
 05 - Empujar cajas
 	05A01: tratar de mover caja a la izquierda estando libre
 	05A02: tratar de mover caja a la derecha estando libre
