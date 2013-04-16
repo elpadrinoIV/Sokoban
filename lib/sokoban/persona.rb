@@ -54,19 +54,19 @@ class Persona < Item
   end
 
   def puede_moverse_izquierda?
-    @escenario.esta_libre?(@x - 1, @y) || @escenario.item_puede_moverse_a_posicion?(@x - 2, @y)
+    @escenario.esta_libre?(@x - 1, @y) || @escenario.item_puede_moverse_desde_hasta_posicion?(@x - 1, @y, @x - 2, @y)
   end
 
   def puede_moverse_derecha?
-    @escenario.esta_libre?(@x + 1, @y) || @escenario.item_puede_moverse_a_posicion?(@x + 2, @y)
+    @escenario.esta_libre?(@x + 1, @y) || @escenario.item_puede_moverse_desde_hasta_posicion?(@x + 1, @y, @x + 2, @y)
   end
 
   def puede_moverse_arriba?
-    @escenario.esta_libre?(@x, @y - 1) || @escenario.item_puede_moverse_a_posicion?(@x, @y - 2)
+    @escenario.esta_libre?(@x, @y - 1) || @escenario.item_puede_moverse_desde_hasta_posicion?(@x, @y - 1, @x, @y - 2)
   end
 
   def puede_moverse_abajo?
-    @escenario.esta_libre?(@x, @y + 1) || @escenario.item_puede_moverse_a_posicion?(@x, @y + 2)
+    @escenario.esta_libre?(@x, @y + 1) || @escenario.item_puede_moverse_desde_hasta_posicion?(@x, @y + 1, @x, @y + 2)
   end
 
   def get_imagen

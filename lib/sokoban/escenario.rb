@@ -44,16 +44,16 @@ class Escenario
      libre
   end
 
-  def item_puede_moverse_a_posicion?(x, y)
-    puede_moverse = esta_libre?(x, y)
+  def item_puede_moverse_desde_hasta_posicion?(x_desde, y_desde, x_hasta, y_hasta)
+    puede_moverse = esta_libre?(x_hasta, y_hasta)
     @paredes.each do |item|
-      if item.get_x == x && item.get_y == y
+      if item.get_x == x_desde && item.get_y == y_desde
         puede_moverse = puede_moverse && item.movible?
       end
     end
 
     @cajas.each do |item|
-      if item.get_x == x && item.get_y == y
+      if item.get_x == x_desde && item.get_y == y_desde
         puede_moverse = puede_moverse && item.movible?
       end
     end
