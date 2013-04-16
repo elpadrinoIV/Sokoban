@@ -24,7 +24,11 @@
 	05A06: tratar de mover caja a la derecha estando ocupado con pared
 	05A07: tratar de mover caja arriba estando ocupado con pared
 	05A08: tratar de mover caja abajo estando ocupado con pared
-	05A08: tratar de mover caja estando ocupado con otra caja
+	05A09: tratar de mover caja a la izquierda estando ocupado con otra caja
+	05A10: tratar de mover caja a la derecha estando ocupado con otra caja
+	05A11: tratar de mover caja arriba estando ocupado con otra caja
+	05A12: tratar de mover caja abajo estando ocupado con otra caja
+
 06 - Cargar nivel de archivo
 07 - Temas (gráficos)
 08 - Highscore

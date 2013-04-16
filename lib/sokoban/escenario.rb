@@ -26,13 +26,19 @@ class Escenario
   end
 
   def esta_libre? (x, y)
+    # print "esta libre (#{x}, #{y})?\n"
     libre = true
-    @paredes.each do |item|  
-      libre = false if (item.ocupa_lugar? && item.get_x == x && item.get_y == y)
+    @paredes.each do |item|
+      
+      if (item.ocupa_lugar? && item.get_x == x && item.get_y == y)
+        libre = false
+      end
     end
 
     @cajas.each do |item|
-      libre = false if (item.ocupa_lugar? && item.get_x == x && item.get_y == y)
+      if (item.ocupa_lugar? && item.get_x == x && item.get_y == y)
+        libre = false
+      end
     end
 
      libre
@@ -40,7 +46,6 @@ class Escenario
 
   def item_puede_moverse_a_posicion?(x, y)
     puede_moverse = esta_libre?(x, y)
-
     @paredes.each do |item|
       if item.get_x == x && item.get_y == y
         puede_moverse = puede_moverse && item.movible?
@@ -52,6 +57,8 @@ class Escenario
         puede_moverse = puede_moverse && item.movible?
       end
     end
+
+    puede_moverse
   end
 
   def agregar_destino(destino)

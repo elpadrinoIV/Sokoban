@@ -44,13 +44,13 @@ class Persona < Item
   end
 
   def mover_abajo
-    if puede_moverse_arriba?
+    if puede_moverse_abajo?
       caja_abajo = caja_en_posicion(@x, @y + 1)
       if nil != caja_abajo
         caja_abajo.mover_abajo
       end
-    end
       @y = @y + 1
+    end
   end
 
   def puede_moverse_izquierda?
