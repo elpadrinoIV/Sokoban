@@ -34,7 +34,7 @@ class TestJugarNivelEntero < Test::Unit::TestCase
 
     assert_equal(true, escenario.todos_los_destinos_ocupados?, "el nivel deberia estar completo")
   end
-=begin
+
   def test_14a03_nivel_complejo_movimientos_extras
     escenario_loader = EscenarioLoader.new
     archivo = File.dirname(__FILE__) + '/esquema_test_A1402_nivel_complejo.txt'
@@ -48,5 +48,5 @@ class TestJugarNivelEntero < Test::Unit::TestCase
 
     assert_equal(true, escenario.todos_los_destinos_ocupados?, "el nivel deberia estar completo")
   end
-=end
+
 end
