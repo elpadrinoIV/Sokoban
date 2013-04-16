@@ -40,6 +40,9 @@
 11 - Visualización
 12 - Undo
 13 - Contar movimientos
+	13A01 - Movimientos por zonas libres
+	13A02 - Movimientos empujando cajas (pero nunca trabandose)
+	13A03 - Movimientos por zonas libres, empujando cajas y tratando de moverse sobre paredes y cajas bloqueadas
 14 - Jugada de un nivel completo
 	14A01 - Nivel trivial
 	14A02 - Nivel mas complejo

@@ -7,6 +7,7 @@ require 'item'
 
 class Persona < Item
   def initialize
+    @cantidad_movimientos = 0
   end
 
   def set_escenario(escenario)
@@ -20,6 +21,7 @@ class Persona < Item
         caja_a_la_izquierda.mover_izquierda
       end
       @x = @x - 1
+      @cantidad_movimientos = @cantidad_movimientos + 1
     end
   end
 
@@ -30,6 +32,7 @@ class Persona < Item
         caja_a_la_derecha.mover_derecha
       end
       @x = @x + 1
+      @cantidad_movimientos = @cantidad_movimientos + 1
     end
   end
 
@@ -40,6 +43,7 @@ class Persona < Item
         caja_arriba.mover_arriba
       end
       @y = @y - 1
+      @cantidad_movimientos = @cantidad_movimientos + 1
     end
   end
 
@@ -50,6 +54,7 @@ class Persona < Item
         caja_abajo.mover_abajo
       end
       @y = @y + 1
+      @cantidad_movimientos = @cantidad_movimientos + 1
     end
   end
 
@@ -79,5 +84,9 @@ class Persona < Item
       caja_en_pos = caja if caja.get_x == x && caja.get_y == y
     end
     caja_en_pos
+  end
+
+  def get_cantidad_movimientos
+    @cantidad_movimientos
   end
 end
