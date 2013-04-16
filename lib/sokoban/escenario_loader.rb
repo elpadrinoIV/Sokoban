@@ -21,9 +21,6 @@ class EscenarioLoader
 
   def cargar_escenario lineas
     escenario = Escenario.new
-    paredes = Array.new
-    destinos = Array.new
-    cajas = Array.new
     fila = 0
     lineas.each do |linea|
       linea = strip_comentarios linea
