@@ -137,6 +137,48 @@ class Escenario
     todos_ocupados
   end
 
+  def get_ancho
+    max_ancho = 1
+    @paredes.each do |pared|
+      if pared.get_x > max_ancho
+        max_ancho = pared.get_x
+      end
+    end
+
+    @cajas.each do |caja|
+      if caja.get_x > max_ancho
+        max_ancho = caja.get_x
+      end
+    end
+
+    max_ancho
+  end
+
+  def get_alto
+    max_alto = 1
+    @paredes.each do |pared|
+      if pared.get_y > max_alto
+        max_alto = pared.get_y
+      end
+    end
+
+    @cajas.each do |caja|
+      if caja.get_y > max_alto
+        max_alto = caja.get_y
+      end
+    end
+
+    max_alto
+  end
+
+  def get_paredes
+    @paredes
+  end
+
+  def get_destinos
+    @destinos
+  end
+
   def get_cajas
     @cajas
   end
