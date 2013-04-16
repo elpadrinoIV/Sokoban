@@ -11,7 +11,7 @@ class TestNivelCompletado < Test::Unit::TestCase
     # WWWWW
 
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A03_nivel_completado.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_03A_nivel_completado.txt'
     @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
   

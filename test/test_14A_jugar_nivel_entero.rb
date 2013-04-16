@@ -9,7 +9,7 @@ require 'jugador_automatico'
 class TestJugarNivelEntero < Test::Unit::TestCase
   def test_14a01_nivel_trivial
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A1401_nivel_trivial.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_14A01_nivel_trivial.txt'
     escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
 
     jugador_automatico = JugadorAutomatico.new
@@ -23,7 +23,7 @@ class TestJugarNivelEntero < Test::Unit::TestCase
 
   def test_14a02_nivel_complejo
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A1402_nivel_complejo.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_14A02_nivel_complejo.txt'
     escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
 
     jugador_automatico = JugadorAutomatico.new
@@ -37,7 +37,7 @@ class TestJugarNivelEntero < Test::Unit::TestCase
 
   def test_14a03_nivel_complejo_movimientos_extras
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A1402_nivel_complejo.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_14A02_nivel_complejo.txt'
     escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
 
     jugador_automatico = JugadorAutomatico.new

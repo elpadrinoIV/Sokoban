@@ -5,13 +5,13 @@ require 'persona'
 
 class TestZonaLibre < Test::Unit::TestCase
   def setup
-    # WWWWWW
-    # WDW DW
-    # W WWWW
-    # WWW
+    # ######
+    # #.# .#
+    # # ####
+    # ###
 
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A01_mover_zona_libre.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_01A_mover_zona_libre.txt'
     @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
   

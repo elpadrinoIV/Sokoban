@@ -12,7 +12,7 @@ class TestZonaOcupada < Test::Unit::TestCase
     # #####
 
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A02_mover_zona_ocupada.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_02A_mover_zona_ocupada.txt'
     @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
   

@@ -15,7 +15,7 @@ class TestEmpujarCajas < Test::Unit::TestCase
     # ######
 
     escenario_loader = EscenarioLoader.new
-    archivo = File.dirname(__FILE__) + '/esquema_test_A05_empujar_cajas.txt'
+    archivo = File.dirname(__FILE__) + '/esquema_test_05A_empujar_cajas.txt'
     @escenario = escenario_loader.cargar_escenario_desde_archivo(archivo)
   end
 
