@@ -6,7 +6,7 @@ require 'jugador_automatico'
 class TestContarMovimientos < Test::Unit::TestCase
   def setup
     # #######
-    # #     #
+    # #  .. #
     # #   @ #
     # #   $ #
     # # $   #
@@ -42,7 +42,7 @@ class TestContarMovimientos < Test::Unit::TestCase
     jugador_automatico.set_escenario(@escenario)
 
     # #######
-    # #     #
+    # #  .. #
     # #   @ #
     # #   $ #
     # # $   #
