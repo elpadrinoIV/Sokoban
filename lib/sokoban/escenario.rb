@@ -26,10 +26,8 @@ class Escenario
   end
 
   def esta_libre? (x, y)
-    # print "esta libre (#{x}, #{y})?\n"
     libre = true
     @paredes.each do |item|
-      
       if (item.ocupa_lugar? && item.get_x == x && item.get_y == y)
         libre = false
       end
@@ -141,5 +139,9 @@ class Escenario
 
   def get_cajas
     @cajas
+  end
+
+  def get_persona
+    @persona
   end
 end

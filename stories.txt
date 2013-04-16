@@ -28,7 +28,6 @@
 	05A10: tratar de mover caja a la derecha estando ocupado con otra caja
 	05A11: tratar de mover caja arriba estando ocupado con otra caja
 	05A12: tratar de mover caja abajo estando ocupado con otra caja
-
 06 - Cargar nivel de archivo
 07 - Temas (gráficos)
 08 - Highscore
@@ -37,3 +36,7 @@
 11 - Visualización
 12 - Undo
 13 - Contar movimientos
+14 - Jugada de un nivel completo
+	14A01 - Nivel trivial
+	14A02 - Nivel mas complejo
+	14A03 - Nivel mas complejo, haciendo varios movimientos extras (empujar paredes y cajas que no se pueden empujar
