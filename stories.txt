@@ -39,10 +39,16 @@
 10 - Mover con teclado
 11 - Visualización
 12 - Undo
+	12A01 - Mover por zona libre, deshacer la misma cantidad -> posición original
+	12A02 - Mover por zona libre (7 movimientos), 1 undo, 3 undos
+	12A03 - Mover por zona libre, hacer más undos que movimientos -> posición original
+	12A04 - Mover por zonas libres y trabadas, mover en zona trabada no cuenta para undo.
+	12A05 - Mover empujando cajas, trabarse con esas cajas, varias vueltas, varios undos
 13 - Contar movimientos
 	13A01 - Movimientos por zonas libres
 	13A02 - Movimientos empujando cajas (pero nunca trabandose)
 	13A03 - Movimientos por zonas libres, empujando cajas y tratando de moverse sobre paredes y cajas bloqueadas
+	13A04 - Idem anterior, hacer undos
 14 - Jugada de un nivel completo
 	14A01 - Nivel trivial
 	14A02 - Nivel mas complejo

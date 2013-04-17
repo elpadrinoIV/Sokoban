@@ -1,4 +1,5 @@
 require 'destino'
+require 'historia'
 class Escenario
   def initialize
     # WWWWWW
@@ -23,6 +24,7 @@ class Escenario
     @destinos = Array.new
     @paredes = Array.new
     @cajas = Array.new
+    @historia = Historia.new
   end
 
   def esta_libre? (x, y)
@@ -74,7 +76,11 @@ class Escenario
   def agregar_persona(persona)
     @persona = persona
   end
-  
+
+  def deshacer
+    @historia.deshacer
+  end
+
   def dibujar
     escenario = Array.new
     (1..10).each do |nro_fila|
@@ -185,5 +191,9 @@ class Escenario
 
   def get_persona
     @persona
+  end
+
+  def get_historia
+    @historia
   end
 end
